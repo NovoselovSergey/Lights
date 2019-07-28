@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,70 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lights" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6M-gX-XII">
+                                <rect key="frame" x="143" y="94" width="128" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGs-Zm-4Tp">
+                                <rect key="frame" x="143" y="283.5" width="128" height="128"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23M-V6-bmn">
+                                <rect key="frame" x="143" y="473" width="128" height="128"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRv-ra-Dtg">
+                                <rect key="frame" x="20" y="802" width="374" height="60"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="lOL-gS-GJk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPress" destination="BYZ-38-t0r" eventType="touchUpInside" id="Le4-iW-7MI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T6M-gX-XII" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="0RL-kX-LU9"/>
+                            <constraint firstItem="QGs-Zm-4Tp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="143" id="5TQ-2s-7sp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T6M-gX-XII" secondAttribute="trailing" constant="143" id="BXP-yz-kuE"/>
+                            <constraint firstItem="23M-V6-bmn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="143" id="Bzy-uh-RRb"/>
+                            <constraint firstItem="QGs-Zm-4Tp" firstAttribute="top" secondItem="T6M-gX-XII" secondAttribute="bottom" constant="61.5" id="D6d-Zb-4uA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QGs-Zm-4Tp" secondAttribute="trailing" constant="143" id="FDy-08-C2c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aRv-ra-Dtg" secondAttribute="trailing" constant="20" id="Msn-mO-iSM"/>
+                            <constraint firstItem="T6M-gX-XII" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="143" id="Ql3-Sv-mTL"/>
+                            <constraint firstItem="aRv-ra-Dtg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YfC-Sv-V5b"/>
+                            <constraint firstItem="23M-V6-bmn" firstAttribute="top" secondItem="QGs-Zm-4Tp" secondAttribute="bottom" constant="61.5" id="bgg-g3-c04"/>
+                            <constraint firstItem="aRv-ra-Dtg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="l6U-k0-d2a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="23M-V6-bmn" secondAttribute="bottom" constant="261" id="lIT-fn-zda"/>
+                            <constraint firstItem="T6M-gX-XII" firstAttribute="height" secondItem="QGs-Zm-4Tp" secondAttribute="height" id="mZ9-PD-EM4"/>
+                            <constraint firstItem="T6M-gX-XII" firstAttribute="width" secondItem="QGs-Zm-4Tp" secondAttribute="width" id="ngS-qx-dK3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="23M-V6-bmn" secondAttribute="trailing" constant="143" id="spi-x0-Z6d"/>
+                            <constraint firstItem="QGs-Zm-4Tp" firstAttribute="width" secondItem="23M-V6-bmn" secondAttribute="width" id="t1k-4c-zYz"/>
+                            <constraint firstItem="QGs-Zm-4Tp" firstAttribute="height" secondItem="23M-V6-bmn" secondAttribute="height" id="tNs-w3-7hw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="greenLight" destination="23M-V6-bmn" id="Ec9-ge-ju2"/>
+                        <outlet property="redLight" destination="T6M-gX-XII" id="zh7-Sc-YaA"/>
+                        <outlet property="startButton" destination="aRv-ra-Dtg" id="HZZ-lY-pk8"/>
+                        <outlet property="yellowLight" destination="QGs-Zm-4Tp" id="eoZ-0f-wp9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
